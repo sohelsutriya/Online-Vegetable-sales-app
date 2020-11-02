@@ -13,5 +13,7 @@ import com.cg.ovs.bean.BillingDetails;
  */
 @Service
 public interface BillingService {
-	public BillingDetails addBill(BillingDetails bill);
+	public BillingDetails updateBill(int billId,String paymentMode);
+	
+	public double getBillAmount(int cartId);
 }

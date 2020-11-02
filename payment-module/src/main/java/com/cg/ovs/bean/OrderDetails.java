@@ -5,6 +5,8 @@ package com.cg.ovs.bean;
 
 import java.util.List;
 
+import javax.persistence.OneToMany;
+
 /**
  * @author sohel
  *
@@ -12,19 +14,18 @@ import java.util.List;
 public class OrderDetails {
 	int orderId;
 	int customerId;
-	List<Vegetable> vegetables;
+	//List<Vegetable> vegetables;
 	double totalAmount;
-	String status;
+	OrderStatus status;
 
 	public OrderDetails() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public OrderDetails(int orderId, int customerId, List<Vegetable> vegetables, double totalAmount, String status) {
+	public OrderDetails(int orderId, int customerId, double totalAmount, OrderStatus status) {
 		super();
 		this.orderId = orderId;
 		this.customerId = customerId;
-		this.vegetables = vegetables;
 		this.totalAmount = totalAmount;
 		this.status = status;
 	}
@@ -45,14 +46,6 @@ public class OrderDetails {
 		this.customerId = customerId;
 	}
 
-	public List<Vegetable> getVegetables() {
-		return vegetables;
-	}
-
-	public void setVegetables(List<Vegetable> vegetables) {
-		this.vegetables = vegetables;
-	}
-
 	public double getTotalAmount() {
 		return totalAmount;
 	}
@@ -61,18 +54,17 @@ public class OrderDetails {
 		this.totalAmount = totalAmount;
 	}
 
-	public String getStatus() {
+	public OrderStatus getStatus() {
 		return status;
 	}
 
-	public void setStatus(String status) {
+	public void setStatus(OrderStatus status) {
 		this.status = status;
 	}
 
 	@Override
 	public String toString() {
-		return "OrderDetails [orderId=" + orderId + ", customerId=" + customerId + ", vegetables=" + vegetables
-				+ ", totalAmount=" + totalAmount + ", status=" + status + "]";
+		return "OrderDetails [orderId=" + orderId + ", customerId=" + customerId+ ", totalAmount=" + totalAmount + ", status=" + status + "]";
 	}
 
 }

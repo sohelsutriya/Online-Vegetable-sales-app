@@ -3,6 +3,7 @@
  */
 package com.cg.ovs.bean;
 
+import java.util.Date;
 import java.time.LocalDate;
 
 /**
@@ -17,7 +18,7 @@ public class BillingDetails {
 
 	String transactionMode;
 
-	LocalDate transactionDate;
+	Date transactionDate;
 
 	TransactionStatus transactionStatus;
 
@@ -27,7 +28,7 @@ public class BillingDetails {
 		// TODO Auto-generated constructor stub
 	}
 
-	public BillingDetails(int billingId, int orderId, String transactionMode, LocalDate transactionDate,
+	public BillingDetails(int billingId, int orderId, String transactionMode, Date transactionDate,
 			TransactionStatus transactionStatus, Address billingAddress) {
 		super();
 		this.billingId = billingId;
@@ -62,11 +63,11 @@ public class BillingDetails {
 		this.transactionMode = transactionMode;
 	}
 
-	public LocalDate getTransactionDate() {
+	public Date getTransactionDate() {
 		return transactionDate;
 	}
 
-	public void setTransactionDate(LocalDate localDate) {
+	public void setTransactionDate(Date localDate) {
 		this.transactionDate = localDate;
 	}
 
@@ -89,8 +90,8 @@ public class BillingDetails {
 	@Override
 	public String toString() {
 		return "BillingDetails [billingId=" + billingId + ", orderId=" + orderId + ", transactionMode="
-				+ transactionMode + ", transactionDate=" + transactionDate + ", transactionStatus=" + transactionStatus
-				+ ", billingAddress=" + billingAddress + "]";
+				+ transactionMode + ", transactionDate=" + transactionDate.toString() + ", transactionStatus="
+				+ transactionStatus + ", billingAddress=" + billingAddress + "]";
 	}
 
 }

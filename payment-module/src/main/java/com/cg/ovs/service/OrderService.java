@@ -13,5 +13,5 @@ import com.cg.ovs.bean.OrderDetails;
  */
 @Service
 public interface OrderService {
-	public OrderDetails updateOrderStatus(int orderId);
+	public OrderDetails updateOrderStatus(int orderId,int cartId);
 }
