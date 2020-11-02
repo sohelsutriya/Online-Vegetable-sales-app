@@ -12,6 +12,7 @@ import java.util.List;
 public class OrderDetails {
 	int orderId;
 	int customerId;
+	int cartId;
 	List<Vegetable> vegetables;
 	double totalAmount;
 	String status;

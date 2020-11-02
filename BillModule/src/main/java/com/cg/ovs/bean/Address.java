@@ -3,12 +3,26 @@
  */
 package com.cg.ovs.bean;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 /**
  * @author sohel
  *
  */
-
+@Entity(name = "Address2")
 public class Address {
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	Integer addressId;
+	/*
+	 * @OneToOne(cascade = { CascadeType.ALL })
+	 * 
+	 * @JoinColumn(name = "billingId")
+	 */
+	//int billingId;
 	String area;
 	String city;
 	String state;

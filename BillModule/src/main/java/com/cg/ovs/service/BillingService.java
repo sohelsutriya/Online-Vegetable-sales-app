@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.cg.ovs.bean.BillingDetails;
 import com.cg.ovs.bean.CartItem;
+import com.cg.ovs.bean.Item;
 
 /**
  * @author sohel
@@ -18,10 +19,18 @@ public interface BillingService {
 	
 	public double calculateBillAmount(int cartId);
 	
-	public CartItem updateCart(CartItem cart);
+	public Item updateCart(Item item);
 	
 	public BillingDetails addBill(BillingDetails bill);
 	
-	public double getBillAmount(int billingId);
+	public double getBillAmount(int cartId);
+
+	//public BillingDetails updateBill(BillingDetails bill);
+	
+	public boolean deleteById(int billingId);
+	
+	public BillingDetails findByBillingId(int billingId);
+
+	public double getBillByCustomerId(int customerId);
 	
 }
